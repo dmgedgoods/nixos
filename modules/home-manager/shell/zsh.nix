@@ -14,7 +14,7 @@
       nvf = "nvim /etc/nixos/flake.nix";
     };
 
-    initExtra = ''
+    initContent = ''
       export TERM="xterm-256color"
 
       # Key bindings for word movement

@@ -13,7 +13,7 @@
       python312Packages.mdformat
       pyright
       black
-      nixfmt
+      nixfmt-rfc-style
       prettierd
     ];
   };

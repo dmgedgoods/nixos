@@ -25,7 +25,7 @@
 
     # Nix
     nil
-    nixfmt
+    nixfmt-rfc-style
 
     # C/C++
     gcc
