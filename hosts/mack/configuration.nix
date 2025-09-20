@@ -15,4 +15,5 @@
 
   # Host-specific settings
   networking.hostName = "nixos";
+  nix.settings.trusted-users = [ "root" "mack" ];
 }

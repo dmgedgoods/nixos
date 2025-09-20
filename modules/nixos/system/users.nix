@@ -6,8 +6,15 @@
   users.users.mack = {
     isNormalUser = true;
     description = "mack";
-    extraGroups =
-      [ "networkmanager" "wheel" "video" "docker" "libvirtd" "kvm" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "video"
+      "docker"
+      "libvirtd"
+      "kvm"
+      "vmware"
+    ];
     shell = pkgs.zsh;
   };
 

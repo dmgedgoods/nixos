@@ -24,6 +24,7 @@
 
     # AI tools
     gemini-cli
+    claude-code
 
     # Productivity
     obsidian
@@ -31,5 +32,8 @@
     # Secrets management
     sops
     age
+
+    # Virtualization stuff
+    vmware-workstation
   ];
 }

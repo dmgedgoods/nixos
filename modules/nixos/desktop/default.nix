@@ -3,5 +3,5 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./i3.nix ./audio.nix ./gaming.nix ];
+  imports = [ ./i3.nix ./audio.nix ./gaming.nix ./urxvt.nix ];
 }

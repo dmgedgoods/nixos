@@ -1,0 +1,11 @@
+# Check if devenv.nix exists, otherwise use global default
+if [ -f devenv.nix ]; then
+    use devenv
+else
+    use devenv /etc/nixos/modules/home-manager/development/dev_templates/default.nix
+fi
+
+# Automatically switch to zsh if available
+if command -v zsh >/dev/null 2>&1 && [ -z "$ZSH_VERSION" ]; then
+    export SHELL=$(which zsh)
+fi

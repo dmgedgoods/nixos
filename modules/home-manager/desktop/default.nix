@@ -1,7 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./applications.nix ];
+  imports = [ ./applications.nix
+	./urxvt.nix
+	];
 
   # Fonts
   fonts.fontconfig.enable = true;
@@ -57,6 +59,7 @@
     # Fonts
     nerd-fonts.fira-code
     nerd-fonts.hack
+	nerd-fonts.iosevka
     jetbrains-mono
   ];
 }
