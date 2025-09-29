@@ -3,7 +3,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./nvidia.nix ./bluetooth.nix ./power.nix ];
+  imports = [ ./bluetooth.nix ./power.nix ];
 
   # Base graphics
   hardware.graphics = {
