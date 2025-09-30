@@ -33,7 +33,5 @@
     sops
     age
 
-    # Virtualization stuff
-    vmware-workstation
   ];
 }

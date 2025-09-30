@@ -5,13 +5,23 @@
 {
   services.xserver = {
     enable = true;
-    videoDrivers = [ "nvidia" ];
+    videoDrivers = [ "modesetting" ];
     xkb = {
       layout = "us";
       variant = "";
       options = "ctrl:swapcaps";
     };
-    displayManager = { lightdm.enable = true; };
+    displayManager = { 
+      lightdm = {
+        enable = true;
+	greeters = {
+	  slick = {
+	    enable = true;
+	    draw-user-backgrounds = true;
+	  };
+	};
+      }; 
+    };
     windowManager.i3 = {
       enable = true;
       extraPackages = with pkgs; [ dmenu i3status i3blocks ];

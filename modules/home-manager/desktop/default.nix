@@ -31,6 +31,7 @@
     sysstat
     iw
     busybox
+    ripgrep
 
     # Communication
     slack
@@ -50,16 +51,11 @@
     # Media
     rclone
 
-    # Gaming packages (since Steam is configured at system level)
-    vulkan-tools
-    vulkan-loader
-    winetricks
-    protontricks
 
     # Fonts
     nerd-fonts.fira-code
     nerd-fonts.hack
-	nerd-fonts.iosevka
+    nerd-fonts.iosevka
     jetbrains-mono
   ];
 }

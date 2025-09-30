@@ -3,5 +3,5 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./networking.nix ./printing.nix ./ssh.nix ./virtualization.nix ];
+  imports = [ ./networking.nix ./printing.nix ./ssh.nix ];
 }

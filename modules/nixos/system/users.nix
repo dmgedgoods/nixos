@@ -9,11 +9,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
-      "video"
       "docker"
-      "libvirtd"
-      "kvm"
-      "vmware"
     ];
     shell = pkgs.zsh;
   };

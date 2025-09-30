@@ -16,20 +16,38 @@
   };
 
   outputs = { self, nixpkgs, home-manager, sops-nix, ... }@inputs: {
-    nixosConfigurations."mack" = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./hosts/mack/configuration.nix
-        sops-nix.nixosModules.sops
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.mack = import ./hosts/mack/home.nix;
-          home-manager.extraSpecialArgs = { inherit sops-nix; };
-        }
-      ];
+    nixosConfigurations = {
+      "mack" = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/mack/configuration.nix
+          sops-nix.nixosModules.sops
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.mack = import ./hosts/mack/home.nix;
+            home-manager.extraSpecialArgs = { inherit sops-nix; };
+          }
+        ];
+      };
+
+      "clyde" = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/clyde/configuration.nix
+          sops-nix.nixosModules.sops
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.mack = import ./hosts/clyde/home.nix;
+            home-manager.extraSpecialArgs = { inherit sops-nix; };
+          }
+        ];
+      };
     };
   };
 }
